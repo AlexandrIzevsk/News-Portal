@@ -1,0 +1,19 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+<!-- Название у нас будет news -->
+{% block title %}
+News
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все товары -->
+{% block content %}
+    <h1>Все новости ({{ news|length }})</h1>
+
+    {% for single_news in news %}
+        <hr>
+        <h2>{{ single_news.title }}</h2>
+        <h6>{{ single_news.time_in|date:'d M Y' }}</h6>
+        <h3>{{ single_news.text|truncatewords:20 }}</h3>
+    {% endfor %}
+{% endblock content %}
