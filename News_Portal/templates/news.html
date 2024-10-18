@@ -1,6 +1,8 @@
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 
+{% load custom_filters %}
+
 <!-- Название у нас будет news -->
 {% block title %}
 News
@@ -12,8 +14,8 @@ News
 
     {% for single_news in news %}
         <hr>
-        <h2>{{ single_news.title }}</h2>
+        <h2>{{ single_news.title|censor }}</h2>
         <h6>{{ single_news.time_in|date:'d M Y' }}</h6>
-        <h3>{{ single_news.text|truncatewords:20 }}</h3>
+        <h3>{{ single_news.text|truncatewords:20|censor }}</h3>
     {% endfor %}
 {% endblock content %}

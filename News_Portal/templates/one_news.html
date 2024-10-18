@@ -1,6 +1,8 @@
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 
+{% load custom_filters %}
+
 <!-- Название у нас будет News -->
 {% block title %}
 OneNews
@@ -8,7 +10,7 @@ OneNews
 
 <!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
 {% block content %}
-    <h3>{{ post.title }}</h3>
+    <h3>{{ post.title|censor }}</h3>
+    <h4>"{{ post.text|censor }}"</h4>
     <h6>{{ post.time_in|date:'d M Y' }}</h6>
-    <h4>"{{ post.text }}"</h4>
 {% endblock content %}
