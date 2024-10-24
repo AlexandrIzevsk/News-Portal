@@ -7,19 +7,17 @@
 
 <!-- Название у нас будет news -->
 {% block title %}
-News
+articles
 {% endblock title %}
 
 <!-- В контенте на странице мы выводим все товары -->
 {% block content %}
-    <h1>Все новости ({{ news|length }})</h1>
+    <h1>Все статьи ({{ articles|length }})</h1>
+    <form action="" method="get">
+        {{ filterset.form.as_p }}
 
-    {% for single_news in news %}
-        <hr>
-        <h2>{{ single_news.title|censor }}</h2>
-        <h6>{{ single_news.time_in|date:'d M Y' }}</h6>
-        <h3>{{ single_news.text|truncatewords:20|censor }}</h3>
-    {% endfor %}
+    <input type="submit" value="Найти" />
+    </form>
 
    {# Добавляем пагинацию на страницу #}
 
@@ -43,4 +41,12 @@ News
            <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
        {% endif %}
    {% endif %}
+
+    {% for single_articles in articles %}
+        <hr>
+        <h2>{{ single_articles.title|censor }}</h2>
+        <h6>{{ single_articles.time_in|date:'d M Y' }}</h6>
+        <h3>{{ single_articles.text|truncatewords:20|censor }}</h3>
+    {% endfor %}
+
 {% endblock content %}
