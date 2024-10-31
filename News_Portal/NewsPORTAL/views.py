@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin #LoginRequiredMixin
 from django.urls import reverse_lazy
 from datetime import datetime
 from django.views.generic import (
@@ -52,7 +53,8 @@ class OneNewsDetail(DetailView):
 
 
 # Добавляем новое представление для создания новости.
-class NewsCreate(CreateView):
+class NewsCreate(PermissionRequiredMixin, CreateView):
+    permission_required = ('NewsPORTAL.add_post',)
     # Указываем нашу разработанную форму
     form_class = PostForm
     # модель товаров
@@ -67,7 +69,8 @@ class NewsCreate(CreateView):
 
 
 # Добавляем представление для изменения новости.
-class NewsUpdate(UpdateView):
+class NewsUpdate(PermissionRequiredMixin, UpdateView):
+    permission_required = ('NewsPORTAL.change_post',)
     # Указываем нашу разработанную форму
     form_class = PostForm
     # модель товаров
@@ -131,7 +134,8 @@ class Articles_SearchList(ListView):
 
 
 
-class ArticlesCreate(CreateView):
+class ArticlesCreate(PermissionRequiredMixin, CreateView):
+    permission_required = ('NewsPORTAL.add_post',)
     # Указываем нашу разработанную форму
     form_class = PostForm
     # модель товаров
@@ -145,7 +149,8 @@ class ArticlesCreate(CreateView):
         return super().form_valid(form)
 
 
-class ArticlesUpdate(UpdateView):
+class ArticlesUpdate(PermissionRequiredMixin, UpdateView):
+    permission_required = ('NewsPORTAL.change_post',)
     # Указываем нашу разработанную форму
     form_class = PostForm
     # модель товаров
