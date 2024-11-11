@@ -46,7 +46,7 @@ class Post(models.Model):
         (news, 'Новость')
     ]
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    categorys =  models.ManyToManyField(Category, through='PostCategory')
+    categorys = models.ManyToManyField(Category, through='PostCategory')
     choice = models.CharField(max_length=2, choices=CHOICES, default=news)
     time_in = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=128)
@@ -96,3 +96,17 @@ class Comment(models.Model):
     def dislike(self):
         self.rating -= 1
         self.save()
+
+
+# class Subscription(models.Model):
+class Subscriber(models.Model):
+    user = models.ForeignKey(
+        to=User,
+        on_delete=models.CASCADE,
+        related_name='subscriptions',
+    )
+    category = models.ForeignKey(
+        to='Category',
+        on_delete=models.CASCADE,
+        related_name='subscriptions',
+    )
