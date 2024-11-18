@@ -13,6 +13,9 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Exists, OuterRef
 from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render
+from .tasks import my_job
+from django.http import HttpResponse
+from django.views import View
 
 
 class NewsList(ListView):
@@ -210,3 +213,9 @@ def subscriptions(request):
         'subscriptions.html',
         {'categories': categories_with_subscriptions},
     )
+
+
+class IndexView(View):
+    def get(self, request):
+        my_job.delay()
+        return HttpResponse('Hello!')
