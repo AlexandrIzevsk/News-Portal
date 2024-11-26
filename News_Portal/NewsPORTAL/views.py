@@ -1,11 +1,12 @@
-from django.contrib.auth.mixins import PermissionRequiredMixin #LoginRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin
+# LoginRequiredMixin
 from django.urls import reverse_lazy
 from datetime import datetime
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from .models import (
-    Post, Category, Subscriber, #Subscription
+    Post, Category, Subscriber,  # Subscription
 )
 from .filters import News_SearchFilter
 from .forms import PostForm
@@ -16,6 +17,7 @@ from django.shortcuts import render
 from .tasks import my_job
 from django.http import HttpResponse
 from django.views import View
+from django.core.cache import cache
 
 
 class NewsList(ListView):
@@ -24,12 +26,10 @@ class NewsList(ListView):
     context_object_name = 'news'
     paginate_by = 10
 
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_now'] = datetime.utcnow()
         context['next_sale'] = "Распродажа в среду!"
-
 
         return context
 
@@ -106,7 +106,6 @@ class ArticlesList(ListView):
     context_object_name = 'articles'
     paginate_by = 2
 
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['time_now'] = datetime.utcnow()
@@ -120,6 +119,14 @@ class OneArticlesDetail(DetailView):
     queryset = Post.objects.filter(choice='PA')
     template_name = 'one_news.html'
     context_object_name = 'post'
+
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post - {self.kwargs["pk"]}', None)
+
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post - {self.kwargs["pk"]}', obj)
+        return obj
 
 
 class Articles_SearchList(ListView):
@@ -140,7 +147,6 @@ class Articles_SearchList(ListView):
         context['filterset'] = self.filterset
 
         return context
-
 
 
 class ArticlesCreate(PermissionRequiredMixin, CreateView):
@@ -179,7 +185,6 @@ class ArticlesDelete(DeleteView):
     success_url = reverse_lazy('articles_list')
 
 
-#
 @login_required
 @csrf_protect
 def subscriptions(request):
@@ -195,7 +200,7 @@ def subscriptions(request):
         elif action == 'unsubscribe':
             # Subscription.objects.filter(
             Subscriber.objects.filter(
-                    user=request.user,
+                user=request.user,
                 category=category,
             ).delete()
 

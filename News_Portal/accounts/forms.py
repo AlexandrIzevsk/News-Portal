@@ -5,7 +5,6 @@ from allauth.account.forms import SignupForm
 from django.core.mail import send_mail
 
 
-
 class CustomSignupForm(SignupForm):
     def save(self, request):
         user = super().save(request)
@@ -17,6 +16,7 @@ class CustomSignupForm(SignupForm):
             recipient_list=[user.email],
         )
         return user
+
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(label="Email")
@@ -33,5 +33,3 @@ class SignUpForm(UserCreationForm):
             "password1",
             "password2",
         )
-
-

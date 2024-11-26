@@ -6,6 +6,7 @@ from .models import Post
 
 class PostForm(forms.ModelForm):
     text = forms.CharField(min_length=20)
+
     class Meta:
         model = Post
         fields = [
@@ -21,6 +22,7 @@ class PostForm(forms.ModelForm):
         text = cleaned_data.get("text")
 
         if title == text:
-            raise ValidationError({"Описание не должно быть идентично названию."})
+            raise ValidationError({"Описание не должно быть идентично \
+                                   названию."})
 
         return cleaned_data

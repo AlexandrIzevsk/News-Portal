@@ -1,22 +1,13 @@
 from django.db.models.signals import m2m_changed
-# from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 from django.core.mail.message import EmailMultiAlternatives
 
-from .models import Post, PostCategory
-
+from .models import PostCategory
 
 
 @receiver(m2m_changed, sender=PostCategory)
-# @receiver(post_save, sender=Post)
-# def news_created(instance, action="post_add", **kwargs):
 def notify_subscribers(sender, instance, **kwargs):
-    # if kwargs['action'] == 'post_add':
-    #     pass
-    #
-
-
     print('Опубликована новость', instance)
     if kwargs['action'] == 'post_add':
         # return
@@ -29,7 +20,7 @@ def notify_subscribers(sender, instance, **kwargs):
         text_content = (
             f'Заголовок: {instance.title}\n'
             f'Текст: {instance.text}\n\n'
-            f'Ссылка на новость/статью: http://127.0.0.1:8000{instance.get_absolute_url()}'
+            f'Ссылка на новость/статью: http://127.0.0.1:8000{instance.get_absolute_url()}'  # noqa
         )
         html_content = (
             f'Заголовок: {instance.title}<br>'

@@ -4,7 +4,6 @@ import logging
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 from django.conf import settings
-from django.core.mail import mail_managers
 from django.core.management.base import BaseCommand
 from django_apscheduler import util
 from django_apscheduler.jobstores import DjangoJobStore
@@ -23,7 +22,9 @@ def my_job():
     posts = Post.objects.filter(time_in__gte=last_week)
     categories = set(posts.values_list('categorys__name', flat=True))
     subscribers = set(User.objects.filter(
-            subscriptions__category__name__in=categories).values_list('email', flat=True))
+            subscriptions__category__name__in=categories).values_list(
+        'email', flat=True)
+    )
     html_content = render_to_string(
         'daily_post.html',
         {
@@ -40,6 +41,7 @@ def my_job():
     )
     msg.attach_alternative(html_content, 'text/html')
     msg.send()
+
 
 @util.close_old_connections
 def delete_old_job_executions(max_age=604_800):

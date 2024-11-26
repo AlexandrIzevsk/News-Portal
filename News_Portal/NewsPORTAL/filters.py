@@ -1,6 +1,6 @@
 from django_filters import FilterSet, DateTimeFilter, ModelChoiceFilter
 from django.forms import DateTimeInput
-from .models import Post, Category, PostCategory
+from .models import Post, Category  # , PostCategory
 
 
 class News_SearchFilter(FilterSet):
@@ -11,7 +11,6 @@ class News_SearchFilter(FilterSet):
         empty_label='Любая',
     )
 
-
     added_after = DateTimeFilter(
         field_name='time_in',
         lookup_expr='gt',
@@ -20,6 +19,7 @@ class News_SearchFilter(FilterSet):
             attrs={'type': 'datetime-local'},
         ),
     )
+
     class Meta:
         model = Post
         fields = {

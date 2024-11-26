@@ -14,7 +14,9 @@ def my_job():
     posts = Post.objects.filter(time_in__gte=last_week)
     categories = set(posts.values_list('categorys__name', flat=True))
     subscribers = set(User.objects.filter(
-            subscriptions__category__name__in=categories).values_list('email', flat=True))
+            subscriptions__category__name__in=categories).values_list(
+            'email', flat=True)
+    )
     html_content = render_to_string(
         'daily_post.html',
         {

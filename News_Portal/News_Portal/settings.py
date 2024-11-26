@@ -20,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*j8joi6jf$=7xr=l!k=5h46)66u$@rwpv9-hqlp)m41c!-x2+u'
+SECRET_KEY = 'django-insecure-*j8joi6jf$=7xr=l!k=5h46)66u$@rwpv9-hqlp)\
+              m41c!-x2+u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -106,16 +107,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttribute\
+                 SimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLength\
+                 Validator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPassword\
+                 Validator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPassword\
+                 Validator',
     },
 ]
 
@@ -175,7 +180,6 @@ EMAIL_USE_SSL = True
 EMAIL_TIMEOUT = 60
 
 
-
 DEFAULT_FROM_EMAIL = "example@yandex.ru"
 
 APSCHEDULER_DATETIME_FORMAT = 'N j, Y, f:s a'
@@ -187,3 +191,10 @@ CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
+    }
+}
