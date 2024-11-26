@@ -16,7 +16,7 @@ News
 
     {% for single_news in news %}
         <hr>
-        <h2>{{ single_news.title|censor }}</h2>
+        <a href="{{ link }}{{ single_news.get_absolute_url }}"><h2>{{ single_news.title|censor }}</h2></a>
         <h6>{{ single_news.time_in|date:'d M Y' }}</h6>
         <h3>{{ single_news.text|truncatewords:20|censor }}</h3>
     {% endfor %}
