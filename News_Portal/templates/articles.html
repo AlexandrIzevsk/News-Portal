@@ -16,7 +16,8 @@ Articles
 
     {% for single_articles in articles %}
         <hr>
-        <h2>{{ single_articles.title|censor }}</h2>
+        <a href="{{ link }}{{ single_articles.get_absolute_url }}"><h2>{{ single_articles.title|censor }}</h2></a>
+<!--        <h2>{{ single_articles.title|censor }}</h2>-->
         <h6>{{ single_articles.time_in|date:'d M Y' }}</h6>
         <h3>{{ single_articles.text|truncatewords:20|censor }}</h3>
     {% endfor %}
