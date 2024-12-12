@@ -1,0 +1,29 @@
+[33mcommit ea9bdcd367f7f251937b64d80ad1948a44189bf1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: AlexandrIzevsk <sasha-sarov-333@rambler.ru>
+Date:   Thu Oct 24 11:55:33 2024 +0400
+
+    News Portal: add flatpages: create news/articles, edit news/articles, delete news/articles
+
+[33mcommit e4dd0ddd60391a0c1d504817300baded5792c08c[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: AlexandrIzevsk <sasha-sarov-333@rambler.ru>
+Date:   Fri Oct 18 10:10:58 2024 +0400
+
+    News Portal: add custom_filters
+
+[33mcommit 0cac32a6489a4f03c57dc2d6cb946998f8002086[m
+Author: AlexandrIzevsk <sasha-sarov-333@rambler.ru>
+Date:   Thu Oct 17 16:11:17 2024 +0400
+
+    News Portal: news visible page
+
+[33mcommit 1ee7ec1a136afe663c405cec1e8b9325ba19c792[m
+Author: AlexandrIzevsk <sasha-sarov-333@rambler.ru>
+Date:   Thu Oct 17 13:53:47 2024 +0400
+
+    News Portal: add models, views
+
+[33mcommit 67badaafcf327ea6840763d55bc298bd64f2af72[m
+Author: AlexandrIzevsk <sasha-sarov-333@rambler.ru>
+Date:   Mon Oct 14 18:18:04 2024 +0400
+
+    News_Portal: create
