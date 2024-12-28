@@ -1,0 +1,79 @@
+2024-12-28 20:02:30,056 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x000001E6FB8CEBC0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-28 20:15:11,278 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x000001FEFCA40580>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-28 20:15:11,300 ERROR "GET /news/ HTTP/1.1" 500 90430 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-28 20:16:58,282 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x00000217BF0A9E80>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-28 20:16:58,299 ERROR "GET /news/ HTTP/1.1" 500 90452 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-28 20:25:27,286 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x0000020C81F68100>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-28 20:25:27,289 ERROR "GET /news/ HTTP/1.1" 500 90737 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-28 20:25:44,611 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x0000020C81E13B40>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-28 20:25:44,614 ERROR "GET /news/ HTTP/1.1" 500 90737 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None

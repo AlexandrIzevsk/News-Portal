@@ -1,0 +1,75 @@
+INFO Watching for file changes with StatReloader
+INFO "GET /news/ HTTP/1.1" 200 4491
+2024-12-28 19:23:17,216 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:23:24,257 INFO basehttp "GET /news/ HTTP/1.1" 200 4491
+2024-12-28 19:25:05,019 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:25:06,059 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:26:14,748 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:31:54,748 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:32:49,241 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:32:50,157 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:35:10,741 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:35:11,677 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:39:54,076 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:39:54,989 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:40:26,804 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:40:27,712 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:40:42,212 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\NewsPORTAL\views.py changed, reloading.
+2024-12-28 19:40:43,139 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:41:10,689 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\NewsPORTAL\views.py changed, reloading.
+2024-12-28 19:41:11,609 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:41:23,267 ERROR basehttp "GET /news/ HTTP/1.1" 500 88603
+2024-12-28 19:45:45,802 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\NewsPORTAL\views.py changed, reloading.
+2024-12-28 19:45:46,732 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:46:11,008 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\NewsPORTAL\views.py changed, reloading.
+2024-12-28 19:46:11,954 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:46:19,135 ERROR basehttp "GET /news/ HTTP/1.1" 500 88603
+2024-12-28 19:58:03,545 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:58:04,887 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:58:28,090 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:58:29,096 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 19:59:57,205 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 19:59:58,188 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:01:14,556 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:01:15,503 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:02:10,126 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:02:11,141 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:02:30,078 ERROR basehttp "GET /news/ HTTP/1.1" 500 89021
+2024-12-28 20:06:34,717 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:06:35,795 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:07:24,048 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:07:25,049 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:08:08,786 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:08:09,675 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:09:06,508 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:09:07,473 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:10:30,211 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:10:31,161 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:11:57,202 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:11:58,195 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:12:48,569 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:12:49,553 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:14:52,495 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:14:53,440 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:15:11,300 ERROR basehttp "GET /news/ HTTP/1.1" 500 90430
+2024-12-28 20:16:39,923 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:16:40,843 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:16:58,282 ERROR log Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-28 20:16:58,299 ERROR basehttp "GET /news/ HTTP/1.1" 500 90452
+2024-12-28 20:23:46,358 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.
+2024-12-28 20:23:48,177 INFO autoreload Watching for file changes with StatReloader
+2024-12-28 20:24:32,025 INFO autoreload C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\News_Portal\settings.py changed, reloading.

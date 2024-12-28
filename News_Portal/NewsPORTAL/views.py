@@ -18,9 +18,13 @@ from .tasks import my_job
 from django.http import HttpResponse
 from django.views import View
 from django.core.cache import cache
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class NewsList(ListView):
+    logger.info('INFO')
     queryset = Post.objects.filter(choice='NS').order_by('-time_in')
     template_name = 'news.html'
     context_object_name = 'news'
