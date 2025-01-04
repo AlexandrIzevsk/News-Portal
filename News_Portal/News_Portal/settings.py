@@ -28,7 +28,7 @@ DEBUG = True
 # DEBUG = False
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -59,6 +59,9 @@ SITE_URL = 'http://127.0.0.1:8000'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+
+    'django.middleware.locale.LocaleMiddleware',
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -109,20 +112,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttribute\
-                 SimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLength\
-                 Validator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPassword\
-                 Validator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPassword\
-                 Validator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -130,7 +129,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -166,23 +166,23 @@ ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 30
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 
 # Рассылка Email
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 # EMAIL_PORT = 587
 
 
-EMAIL_HOST_USER = "example@yandex.ru"
+EMAIL_HOST_USER = "sasha-sarov-333@yandex.ru"
 
-EMAIL_HOST_PASSWORD = "gi"
+EMAIL_HOST_PASSWORD = "smltayezyojfsgop"
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_TIMEOUT = 60
 
 
-DEFAULT_FROM_EMAIL = "example@yandex.ru"
+DEFAULT_FROM_EMAIL = "sasha-sarov-333@yandex.ru"
 
 APSCHEDULER_DATETIME_FORMAT = 'N j, Y, f:s a'
 
@@ -218,6 +218,9 @@ CACHES = {
 #         },
 #     },
 # }
+SERVER_EMAIL = 'sasha-sarov-333@yandex.ru'
+ADMINS = [('ALEXANDR', 'sasha-sarov-333@rambler.ru')]
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -319,3 +322,8 @@ LOGGING = {
         },
     }
 }
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
+

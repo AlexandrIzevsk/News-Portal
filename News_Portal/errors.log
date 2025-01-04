@@ -77,3 +77,518 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
 django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
 2024-12-28 20:25:44,614 ERROR "GET /news/ HTTP/1.1" 500 90737 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-29 23:25:31,685 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x0000023E5D38E180>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-29 23:25:31,691 ERROR "GET /news/ HTTP/1.1" 500 90945 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-29 23:25:32,141 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x0000023E5D379580>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-29 23:25:32,149 ERROR "GET /news/ HTTP/1.1" 500 90945 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-29 23:25:32,414 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x0000023E5D6B9D40>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-29 23:25:32,417 ERROR "GET /news/ HTTP/1.1" 500 90945 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-29 23:25:32,647 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x0000023E5D73D3C0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-29 23:25:32,657 ERROR "GET /news/ HTTP/1.1" 500 90945 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-29 23:47:04,585 ERROR Internal Server Error: /admin/auth/user/add/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('The module in NAME could not be imported: django.contrib.auth.password_validation.UserAttribute                 SimilarityValidator. Check your AUTH_PASSWORD_VALIDATORS setting.'), <traceback object at 0x0000022411B9D280>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\module_loading.py", line 16, in cached_import
+    return getattr(module, class_name)
+AttributeError: module 'django.contrib.auth.password_validation' has no attribute 'UserAttribute                 SimilarityValidator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\contrib\auth\password_validation.py", line 29, in get_password_validators
+    klass = import_string(validator["NAME"])
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\module_loading.py", line 32, in import_string
+    raise ImportError(
+ImportError: Module "django.contrib.auth.password_validation" does not define a "UserAttribute                 SimilarityValidator" attribute/class
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\contrib\admin\helpers.py", line 156, in __iter__
+    yield AdminField(self.form, field, is_first=(i == 0))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\contrib\admin\helpers.py", line 170, in __init__
+    self.field = form[field]  # A django.forms.BoundField instance
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\forms\forms.py", line 189, in __getitem__
+    self._bound_fields_cache[name] = field.get_bound_field(self, name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\forms\fields.py", line 248, in get_bound_field
+    return BoundField(form, self, field_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\forms\boundfield.py", line 28, in __init__
+    self.help_text = field.help_text or ""
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\functional.py", line 149, in __wrapper__
+    res = func(*self.__args, **self.__kw)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\contrib\auth\password_validation.py", line 89, in _password_validators_help_text_html
+    help_texts = password_validators_help_texts(password_validators)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\contrib\auth\password_validation.py", line 78, in password_validators_help_texts
+    password_validators = get_default_password_validators()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\contrib\auth\password_validation.py", line 22, in get_default_password_validators
+    return get_password_validators(settings.AUTH_PASSWORD_VALIDATORS)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\contrib\auth\password_validation.py", line 35, in get_password_validators
+    raise ImproperlyConfigured(msg % validator["NAME"])
+django.core.exceptions.ImproperlyConfigured: The module in NAME could not be imported: django.contrib.auth.password_validation.UserAttribute                 SimilarityValidator. Check your AUTH_PASSWORD_VALIDATORS setting.
+2024-12-29 23:47:04,607 ERROR "GET /admin/auth/user/add/ HTTP/1.1" 500 625936 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-29 23:54:58,803 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x000002746130C900>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-29 23:54:58,806 ERROR "GET /news/ HTTP/1.1" 500 90819 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-30 00:05:17,291 ERROR Internal Server Error: /accounts/signup/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'smtplib.SMTPDataError'>, SMTPDataError(550, b'5.7.0 Sender address rejected: not owned by authorized user 1735502716-F5jNnCSOma60-Nf1QYWXe'), <traceback object at 0x00000279EA3419C0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\decorators.py", line 12, in wrap
+    resp = function(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\account\views.py", line 158, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\account\mixins.py", line 53, in dispatch
+    response = super().dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\account\mixins.py", line 118, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\account\mixins.py", line 82, in post
+    response = self.form_valid(form)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\account\views.py", line 164, in form_valid
+    self.user, resp = form.try_save(self.request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\account\forms.py", line 456, in try_save
+    return super().try_save(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\allauth\account\forms.py", line 390, in try_save
+    user = self.save(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\accounts\forms.py", line 12, in save
+    send_mail(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\mail\__init__.py", line 87, in send_mail
+    return mail.send()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\mail\message.py", line 299, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\mail\backends\smtp.py", line 134, in send_messages
+    sent = self._send(message)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\mail\backends\smtp.py", line 152, in _send
+    self.connection.sendmail(
+  File "C:\Program Files (x86)\python\lib\smtplib.py", line 908, in sendmail
+    raise SMTPDataError(code, resp)
+smtplib.SMTPDataError: (550, b'5.7.0 Sender address rejected: not owned by authorized user 1735502716-F5jNnCSOma60-Nf1QYWXe')
+2024-12-30 00:05:17,309 ERROR "POST /accounts/signup/ HTTP/1.1" 500 187622 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-30 00:16:33,379 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x000002C71C908040>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-30 00:16:33,382 ERROR "GET /news/ HTTP/1.1" 500 91251 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2024-12-30 00:24:17,927 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x00000222A2463440>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2024-12-30 00:24:19,244 ERROR "GET /news/ HTTP/1.1" 500 145 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-05 00:43:45,868 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('new.html, NewsPORTAL/post_list.html'), <traceback object at 0x0000022FE8954FC0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new.html, NewsPORTAL/post_list.html
+2025-01-05 00:43:48,324 ERROR "GET /news/ HTTP/1.1" 500 145 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-05 01:18:56,547 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 17: 'get_current_language'. Did you forget to register or load this tag?"), <traceback object at 0x000001DE7775CD80>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_current_language'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'get_current_language'. Did you forget to register or load this tag?
+2025-01-05 01:18:56,553 ERROR "GET /news/ HTTP/1.1" 500 207743 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-05 01:19:43,757 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name."), <traceback object at 0x000002B31F420200>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name.
+2025-01-05 01:19:43,769 ERROR "GET /news/ HTTP/1.1" 500 178523 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-05 01:22:43,307 ERROR Internal Server Error: / C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.'), <traceback object at 0x000002B31F08E100>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\retry.py", line 62, in call_with_retry
+    return do()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 730, in _connect
+    raise err
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 127, in reconnect_on_error
+    yield
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 1422, in get_connection
+    connection.connect()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\retry.py", line 62, in call_with_retry
+    return do()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 730, in _connect
+    raise err
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\kombu\connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\app\base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Program Files (x86)\python\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 384, in ensure
+    return retry_over_time(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\kombu\utils\functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\commands\core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 1422, in get_connection
+    connection.connect()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\redis\connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\News_Portal\NewsPORTAL\views.py", line 231, in get
+    my_job.delay()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\app\task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\app\task.py", line 594, in apply_async
+    return app.send_task(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\celery\app\base.py", line 801, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Program Files (x86)\python\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\kombu\connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+2025-01-05 01:22:43,326 ERROR "GET / HTTP/1.1" 500 273093 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None

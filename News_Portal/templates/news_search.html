@@ -1,6 +1,8 @@
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
+
 {% load custom_filters %}
 
 {% load custom_tags %}
@@ -12,12 +14,12 @@ news
 
 <!-- В контенте на странице мы выводим все товары -->
 {% block content %}
-    <h1>Все новости ({{ news|length }})</h1>
+    <h1>{% trans "All news" %} ({{ news|length }})</h1>
 
     <form action="" method="get">
         {{ filterset.form.as_p }}
 
-    <input type="submit" value="Найти" />
+    <input type="submit" value="{% trans 'Search' %}" />
     </form>
 
    {# Добавляем пагинацию на страницу #}
