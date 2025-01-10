@@ -20,6 +20,10 @@ from django.views import View
 from django.core.cache import cache
 import logging
 
+from django.utils import timezone
+from  django.shortcuts import redirect
+
+import pytz #  импортируем стандартный модуль для работы с часовыми поясами
 
 
 logger = logging.getLogger(__name__)
@@ -37,8 +41,16 @@ class NewsList(ListView):
         context['time_now'] = datetime.utcnow()
         context['next_sale'] = "Распродажа в среду!"
 
+        context['current_time'] = timezone.localtime(timezone.now())
+        context['timezones'] = pytz.common_timezones #  добавляем в контекст все доступные часовые пояса
+
         return context
 
+        #  по пост-запросу будем добавлять в сессию часовой пояс, который и будет обрабатываться написанным нами ранее middleware
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/news')
 
 class News_SearchList(ListView):
     queryset = Post.objects.filter(choice='NS').order_by('-time_in')
@@ -57,8 +69,16 @@ class News_SearchList(ListView):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
 
+        context['current_time'] = timezone.localtime(timezone.now())
+        context['timezones'] = pytz.common_timezones  # добавляем в контекст все доступные часовые пояса
+
         return context
 
+        #  по пост-запросу будем добавлять в сессию часовой пояс, который и будет обрабатываться написанным нами ранее middleware
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/news/search')
 
 class OneNewsDetail(DetailView):
     # model = Post
@@ -117,7 +137,16 @@ class ArticlesList(ListView):
         context['time_now'] = datetime.utcnow()
         context['next_sale'] = "Распродажа в среду!"
 
+        context['current_time'] = timezone.localtime(timezone.now())
+        context['timezones'] = pytz.common_timezones  # добавляем в контекст все доступные часовые пояса
+
         return context
+
+        #  по пост-запросу будем добавлять в сессию часовой пояс, который и будет обрабатываться написанным нами ранее middleware
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/articles')
 
 
 class OneArticlesDetail(DetailView):
@@ -152,7 +181,16 @@ class Articles_SearchList(ListView):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
 
+        context['current_time'] = timezone.localtime(timezone.now())
+        context['timezones'] = pytz.common_timezones  # добавляем в контекст все доступные часовые пояса
+
         return context
+
+        #  по пост-запросу будем добавлять в сессию часовой пояс, который и будет обрабатываться написанным нами ранее middleware
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/articles/search')
 
 
 class ArticlesCreate(PermissionRequiredMixin, CreateView):
