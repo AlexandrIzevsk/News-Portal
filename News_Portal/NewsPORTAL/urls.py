@@ -1,21 +1,27 @@
-from django.urls import path
+from django.urls import include, path
 # Импортируем созданное нами представление
 from .views import (
     NewsList, OneNewsDetail, News_SearchList, NewsCreate, NewsUpdate,
     NewsDelete, ArticlesCreate, ArticlesList, Articles_SearchList,
     ArticlesUpdate, ArticlesDelete, OneArticlesDetail,
-    subscriptions, IndexView
+    subscriptions, IndexView, NewsViewset, CategoryViewset
 )
 from django.views.decorators.cache import cache_page
+
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'news', NewsViewset)
+router.register(r'category', CategoryViewset)
 
 
 urlpatterns = [
     path('news/search/', News_SearchList.as_view(),
          name='news_search_list'),
-    path('news/', cache_page(60)(NewsList.as_view()),
-         name='news_list'),
-    path('news/<int:pk>', cache_page(60*5)(OneNewsDetail.as_view()),
-         name='news_detail'),
+    # path('news/', cache_page(60)(NewsList.as_view()),
+    #      name='news_list'),
+    # path('news/<int:pk>', cache_page(60*5)(OneNewsDetail.as_view()),
+    #      name='news_detail'),
     path('news/create/', NewsCreate.as_view(),
          name='news_create'),
     path('news/<int:pk>/edit', NewsUpdate.as_view(),
@@ -36,5 +42,5 @@ urlpatterns = [
          name='articles_delete'),
     path('subscriptions/', subscriptions,
          name='subscriptions'),
-    path('', IndexView.as_view()),
+    path('', include(router.urls), name='api'),
 ]

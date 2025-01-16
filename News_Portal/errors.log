@@ -1556,3 +1556,606 @@ Traceback (most recent call last):
     return handler(request, *args, **kwargs)
 TypeError: post() got an unexpected keyword argument 'pk'
 2025-01-11 00:17:06,398 ERROR "POST /news/51 HTTP/1.1" 500 81086 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:03:57,576 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.'), <traceback object at 0x00000215BA104980>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 396, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 334, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'author-detail' not found. 'author-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 411, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2025-01-16 00:03:57,597 ERROR "GET /news/ HTTP/1.1" 500 171724 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:05:47,765 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.'), <traceback object at 0x00000201AFBB78C0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 396, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 334, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'author-detail' not found. 'author-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 411, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2025-01-16 00:05:47,774 ERROR "GET /news/ HTTP/1.1" 500 171861 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:10:05,393 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.'), <traceback object at 0x000001FF26874C40>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 396, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 334, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'author-detail' not found. 'author-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 411, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2025-01-16 00:10:05,412 ERROR "GET /news/ HTTP/1.1" 500 171861 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:13:24,495 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'MultilingualQuerySet' object has no attribute '_meta'"), <traceback object at 0x000001F77BC74800>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1078, in get_fields
+    info = model_meta.get_field_info(model)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\utils\model_meta.py", line 35, in get_field_info
+    opts = model._meta.concrete_model._meta
+AttributeError: 'MultilingualQuerySet' object has no attribute '_meta'
+2025-01-16 00:13:24,507 ERROR "GET /news/ HTTP/1.1" 500 153473 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:16:11,369 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Field name `categorys_name` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.'), <traceback object at 0x00000183C10BCB00>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `categorys_name` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.
+2025-01-16 00:16:11,377 ERROR "GET /news/ HTTP/1.1" 500 162360 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:16:51,264 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Field name `categorys__name` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.'), <traceback object at 0x0000026E0574AAC0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `categorys__name` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.
+2025-01-16 00:16:51,272 ERROR "GET /news/ HTTP/1.1" 500 162383 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:17:03,930 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Field name `categorys.name` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.'), <traceback object at 0x00000145B31C9BC0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `categorys.name` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.
+2025-01-16 00:17:03,941 ERROR "GET /news/ HTTP/1.1" 500 162360 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 00:44:50,423 ERROR Internal Server Error: /news/20/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Field name `category` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.'), <traceback object at 0x000002415F94EC80>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 571, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `category` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.
+2025-01-16 00:44:50,433 ERROR "GET /news/20/ HTTP/1.1" 500 147090 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 01:02:40,888 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Field name `through_model` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.'), <traceback object at 0x0000011461BB7F80>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `through_model` is not valid for model `Post` in `NewsPORTAL.serializers.PostSerializer`.
+2025-01-16 01:02:40,899 ERROR "GET /news/ HTTP/1.1" 500 162049 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 23:06:46,504 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.'), <traceback object at 0x0000021D9310A280>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 396, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 334, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'author-detail' not found. 'author-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 411, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2025-01-16 23:06:46,529 ERROR "GET /news/ HTTP/1.1" 500 182957 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 23:07:48,618 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("Got AttributeError when attempting to get a value for field `post_category` on serializer `PostSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `Post` instance.\nOriginal exception text was: 'Post' object has no attribute 'post_category'."), <traceback object at 0x00000136DE2AC6C0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Post' object has no attribute 'post_category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `post_category` on serializer `PostSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Post` instance.
+Original exception text was: 'Post' object has no attribute 'post_category'.
+2025-01-16 23:07:48,626 ERROR "GET /news/ HTTP/1.1" 500 162040 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 23:08:20,048 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("Got AttributeError when attempting to get a value for field `category` on serializer `PostSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `Post` instance.\nOriginal exception text was: 'Post' object has no attribute 'category'."), <traceback object at 0x000001F48A5DEFC0>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Post' object has no attribute 'category'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `category` on serializer `PostSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Post` instance.
+Original exception text was: 'Post' object has no attribute 'category'.
+2025-01-16 23:08:20,056 ERROR "GET /news/ HTTP/1.1" 500 161773 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-16 23:08:38,530 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.ImproperlyConfigured'>, ImproperlyConfigured('Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.'), <traceback object at 0x0000025895240B00>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 396, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 334, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'author-detail' not found. 'author-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\relations.py", line 411, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "author-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+2025-01-16 23:08:38,546 ERROR "GET /news/ HTTP/1.1" 500 181836 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None

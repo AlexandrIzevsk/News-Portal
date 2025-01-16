@@ -6,7 +6,7 @@ from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from .models import (
-    Post, Category, Subscriber,  # Subscription
+    Post, Category, Subscriber, Author # Subscription
 )
 from .filters import News_SearchFilter
 from .forms import PostForm
@@ -19,6 +19,10 @@ from django.http import HttpResponse
 from django.views import View
 from django.core.cache import cache
 import logging
+from rest_framework import viewsets
+from rest_framework import permissions
+import django_filters
+from . import serializers
 
 from django.utils import timezone
 from  django.shortcuts import redirect
@@ -27,6 +31,21 @@ import pytz #  импортируем стандартный модуль для
 
 
 logger = logging.getLogger(__name__)
+
+
+class CategoryViewset(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = serializers.CategorySerializer
+
+
+class NewsViewset(viewsets.ModelViewSet):
+    queryset = Post.objects.filter(choice='NS').order_by('-time_in')
+    serializer_class = serializers.PostSerializer
+
+
+# class ArticlesViewset(viewsets.ModelViewSet):
+#     queryset = Post.objects.filter(choice='PA').order_by('-time_in')
+#     serializer_class = serializers.PostSerializer
 
 
 class NewsList(ListView):

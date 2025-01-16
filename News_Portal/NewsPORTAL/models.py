@@ -76,6 +76,8 @@ class Post(models.Model):
     def get_absolute_url(self):
         if self.choice == 'NS':
             return reverse('news_detail', args=[str(self.id)])
+            # return reverse('news-detail', args=[str(self.id)])
+
         elif self.choice == 'PA':
             return reverse('articles_detail', args=[str(self.id)])
 
