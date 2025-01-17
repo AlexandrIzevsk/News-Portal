@@ -87,8 +87,8 @@ class Post(models.Model):
 
 
 class PostCategory(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='categories')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='categories')
 
 
 class Comment(models.Model):

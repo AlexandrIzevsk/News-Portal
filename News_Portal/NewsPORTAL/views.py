@@ -1,12 +1,11 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
-# LoginRequiredMixin
 from django.urls import reverse_lazy
 from datetime import datetime
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from .models import (
-    Post, Category, Subscriber, Author # Subscription
+    Post, Category, Subscriber,
 )
 from .filters import News_SearchFilter
 from .forms import PostForm
@@ -31,21 +30,6 @@ import pytz #  импортируем стандартный модуль для
 
 
 logger = logging.getLogger(__name__)
-
-
-class CategoryViewset(viewsets.ModelViewSet):
-    queryset = Category.objects.all()
-    serializer_class = serializers.CategorySerializer
-
-
-class NewsViewset(viewsets.ModelViewSet):
-    queryset = Post.objects.filter(choice='NS').order_by('-time_in')
-    serializer_class = serializers.PostSerializer
-
-
-# class ArticlesViewset(viewsets.ModelViewSet):
-#     queryset = Post.objects.filter(choice='PA').order_by('-time_in')
-#     serializer_class = serializers.PostSerializer
 
 
 class NewsList(ListView):
