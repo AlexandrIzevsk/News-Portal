@@ -3617,3 +3617,138 @@ AttributeError: Got AttributeError when attempting to get a value for field `cat
 The serializer field might be named incorrectly and not match any attribute or key on the `Category` instance.
 Original exception text was: 'Category' object has no attribute 'get_name_of_category_display'.
 2025-01-18 02:08:20,658 ERROR "GET /api/categories/4/ HTTP/1.1" 500 127430 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-18 02:23:14,592 ERROR Internal Server Error: /api/categories/4/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("Got AttributeError when attempting to get a value for field `category` on serializer `CategorySerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `Category` instance.\nOriginal exception text was: 'Category' object has no attribute 'get_name_of_category_display'."), <traceback object at 0x0000017C06045900>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Category' object has no attribute 'get_name_of_category_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 571, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `category` on serializer `CategorySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Category` instance.
+Original exception text was: 'Category' object has no attribute 'get_name_of_category_display'.
+2025-01-18 02:23:14,603 ERROR "GET /api/categories/4/ HTTP/1.1" 500 127567 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-18 02:23:32,609 ERROR Internal Server Error: /api/categories/1/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("Got AttributeError when attempting to get a value for field `category` on serializer `CategorySerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `Category` instance.\nOriginal exception text was: 'Category' object has no attribute 'get_name_of_category_display'."), <traceback object at 0x0000017C06246F40>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Category' object has no attribute 'get_name_of_category_display'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 571, in data
+    ret = super().data
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `category` on serializer `CategorySerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Category` instance.
+Original exception text was: 'Category' object has no attribute 'get_name_of_category_display'.
+2025-01-18 02:23:32,615 ERROR "GET /api/categories/1/ HTTP/1.1" 500 127440 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None
+2025-01-18 17:31:09,219 ERROR Internal Server Error: /news/ C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 17: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x0000029347AC3380>)
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_current_timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?
+2025-01-18 17:31:09,237 ERROR "GET /news/ HTTP/1.1" 500 226958 C:\Users\user\Documents\Ediuc_py\practic_D2\NewsPortal\Venv\lib\site-packages\django\core\servers\basehttp.py None

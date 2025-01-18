@@ -4,6 +4,7 @@ from rest_framework import serializers
 
 
 class NewsSerializer(serializers.HyperlinkedModelSerializer):
+    rating = serializers.FloatField(read_only=True)
     class Meta:
         model = Post
         fields = [
@@ -18,6 +19,7 @@ class NewsSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ArticleSerializer(serializers.HyperlinkedModelSerializer):
+    rating = serializers.FloatField(read_only=True)
     class Meta:
         model = Post
         fields = [
@@ -32,7 +34,7 @@ class ArticleSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
-    category = serializers.CharField(source="get_name_of_category_display")
+    category = serializers.CharField(source="name")
     class Meta:
         model = Category
         fields = [
@@ -48,6 +50,7 @@ class PostCategorySerializer(serializers.HyperlinkedModelSerializer):
 
 
 class AuthorSerializer(serializers.HyperlinkedModelSerializer):
+    rating = serializers.FloatField(read_only=True)
     class Meta:
         model = Author
         fields = [

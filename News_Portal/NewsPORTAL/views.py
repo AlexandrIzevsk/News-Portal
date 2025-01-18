@@ -26,6 +26,7 @@ from . import serializers
 from django.utils import timezone
 from  django.shortcuts import redirect
 
+
 import pytz #  импортируем стандартный модуль для работы с часовыми поясами
 
 
