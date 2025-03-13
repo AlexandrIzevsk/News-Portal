@@ -1,0 +1,2 @@
+2025-01-26 16:51:25,161 WARNING log Forbidden (CSRF token from POST incorrect.): /admin/auth/user/
+2025-01-26 16:51:32,069 WARNING log Forbidden (CSRF token from POST incorrect.): /admin/auth/user/

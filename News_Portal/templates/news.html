@@ -1,4 +1,3 @@
-<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 {% load i18n %}
 
@@ -8,12 +7,10 @@
 
 {% load custom_tags %}
 
-<!-- Название у нас будет news -->
 {% block title %}
 News
 {% endblock title %}
 
-<!-- В контенте на странице мы выводим все товары -->
 {% block content %}
      {% get_current_timezone as TIME_ZONE %}
     <form action="" method="POST">

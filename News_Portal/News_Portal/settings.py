@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.yandex',
     'django_apscheduler',
     'rest_framework',
+    'corsheaders',
 ]
 
 SITE_ID = 1
@@ -64,6 +65,7 @@ MIDDLEWARE = [
 
     'django.middleware.locale.LocaleMiddleware',
 
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -346,3 +348,6 @@ REST_FRAMEWORK = {
     ]
 
 }
+
+# CORS_ALLOWED_ORIGINS = ['https://codepen.io',]
+CORS_ORIGIN_ALLOW_ALL = True
